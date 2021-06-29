@@ -11,7 +11,7 @@ public class LCM {
         String control = strs[0];
         int n = strs.length;
         boolean isPrefix = false;
-        String res = "";
+        StringBuilder res = new StringBuilder();
 
         for (int i = 0; i < control.length(); i++) {
             char c = control.charAt(i);
@@ -30,10 +30,10 @@ public class LCM {
             if (isPrefix)
                 break;
 
-            res += c;
+            res.append(c);
         }
 
-        return res;
+        return res.toString();
     }
 
 }
