@@ -1,7 +1,7 @@
 public class LCM {
     public static void main(String[] args) {
 
-        String[] words = { "flower", "flow", "flight" };
+        String[] words = { "flower", "flow", "blight" };
 
         System.out.println(longestCommonPrefix(words));
 

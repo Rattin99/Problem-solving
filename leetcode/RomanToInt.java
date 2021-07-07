@@ -1,7 +1,15 @@
-
 public class RomanToInt {
+
+    RomanToInt(int a, int b) {
+        System.out.println(a + " " + b);
+    }
+
+    RomanToInt() {
+        this(1, 2);
+    }
+
     public static void main(String[] args) {
-        System.out.println(romanToInt("IV"));
+
     }
 
     public static int romanToInt(String s) {
