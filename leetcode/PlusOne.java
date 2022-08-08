@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+//problem no: 66, easy, leetcode
 
 class PlusOne {
     public static void main(String[] args) {
@@ -7,6 +7,7 @@ class PlusOne {
         print(plusOne(numbers));
     }
 
+    // 0ms solution, done all by myself!
     static public int[] plusOne(int[] digits) {
         int n = digits.length;
         if (digits[n - 1] < 9) {
