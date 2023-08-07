@@ -1,13 +1,8 @@
 def threesumClosest(nums,target):
-    diff = target
-    ans = 0
+    ans = nums[0] + nums[1] + nums[len(nums) - 1]
     nums.sort()
     
     for i in range(len(nums)):
-        
-        if(i > 0):
-            if(nums[i] == nums[i-1]):
-                continue
     
         start = i+1
         end = len(nums) - 1
@@ -15,18 +10,15 @@ def threesumClosest(nums,target):
         while(start < end):
             
             add = nums[i] + nums[start] + nums[end]
-            d = target - abs(add)
             
-            print([nums[i], nums[start],nums[end]])
+            if(add > target):
+                end -= 1
             
-            if(diff <= d):
-                ans = add
+            else:
                 start += 1
                 
-            
-            elif(diff > d):
-                diff = d
-                end -= 1
+            if(abs(add - target) < abs(ans - target)):
+                ans = add
     
     return ans
 
